@@ -1,0 +1,120 @@
+.heroHome{
+    height: 100vh;
+    width: 100vw;
+   
+    position: relative;
+    spline-viewer{
+        z-index: -1;   
+        clip-path: inset(0 0 11% 0); 
+    }
+    .cd_content_home{
+        color: #202041;
+        position: absolute;
+        width: clamp(325px, 30%, 1500px);
+        aspect-ratio: 5/4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 50%;
+        
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img{
+            width: 101%;
+            opacity: 0;
+        }
+        img:nth-of-type(1){
+            
+            transform: translate(-1%, -18%);
+            animation: reveal1 0.5s 1s ease-in-out forwards;
+        }
+        img:nth-of-type(2){
+            transform: translate(-1%, -18%);
+            animation: reveal2 0.5s 1s ease-in-out forwards;
+        }
+        .cd_game{
+            border-radius: 25px;
+            width: 100%;
+            clip-path: inset(50% 0 50% 0);
+            height: 100%;
+            border: 15px solid #5F9DF7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 10%;
+            text-align: center;
+            animation: reveal3 0.5s 1s ease-in-out forwards;
+            p{
+                font-size: clamp(0.75px, 0.75rem, 1rem);
+                line-height: 1.65;
+            }
+            h1{
+                font-weight: 900;
+            }
+            div{
+                height: 80%;
+                width: 100%;
+            }
+        }
+        .cd_game::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            border-radius: 25px;
+            background-color: #5f9cf744;
+            backdrop-filter: blur(10px) saturate(120%) contrast(45%) brightness(120%);
+        }
+    }
+    
+}
+
+@keyframes reveal1 {
+    0% {
+        transform: translate(-1%, -18%);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+  
+    100% {
+        transform: translate(-1%, -18%);
+        opacity: 1;
+    }
+  }
+
+  @keyframes reveal2 {
+    0% {
+        transform: translate(-50%, 18%) scaleX(-1);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+  
+    100% {
+        transform: translate(1%, 18%) scaleX(-1);
+        opacity: 1;
+    }
+  }
+
+  @keyframes reveal3 {
+    0% {
+        clip-path: inset(50% 0 50% 0);
+    }
+  
+    100% {
+        clip-path: inset(0 0 0 0);
+
+    }
+  }
+
+  

@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body, #root{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'JetBrains Mono', monospace !important;
+    background-color: rgb(200, 207, 239);
+}
+
+#root > div{
+    color: #161E54;
+}
+
+*{
+    font-family: 'JetBrains Mono', monospace !important;
+    min-width: none;
+}
+
+a:hover, button:hover{
+    color: #FC9918;
+    
+    
+}
+textarea{
+    width: 100%;
+    height: inherit !important;
+}

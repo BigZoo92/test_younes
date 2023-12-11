@@ -1,0 +1,60 @@
+.cd_task{
+    position: absolute;
+    margin-top: 100px;
+    padding-bottom: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: clamp(325px, calc(30% + 300px), 2000px);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+    h1{
+        font-weight: 800;
+        font-size: clamp(1.5rem, 5vw, 5rem);
+    }
+    .form_task{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .cd_button_form_task{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cd_hot_air{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        .hot-air{
+            animation: hot-air 5s ease-in-out 1s infinite;
+        }
+        h2{
+            font-size: clamp(1rem, 2.5vw, 3rem);
+            width: 60%;
+            text-align: center;
+        }
+
+    }
+    
+}
+
+@keyframes hot-air {
+    0% {
+    }
+    50% {
+      transform: translateY(30%);
+    }
+    100% {
+    }
+  }
+
+  
